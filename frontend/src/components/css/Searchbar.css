@@ -1,0 +1,38 @@
+.searchBar__input {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.searchBar__input > input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: rgb(49, 49, 49);
+  width: 300px;
+}
+
+.searchBar__input > .MuiSvgIcon-root {
+  color: gray;
+}
+
+@media only screen and (max-width: 1350px) {
+  .searchBar__input > input {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .searchBar__input > input {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .searchBar__input {
+    display: none;
+  }
+}

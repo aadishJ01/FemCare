@@ -1,0 +1,113 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.loginContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.loginContainer:hover .login_top:before,
+.loginContainer:hover .login_top:after,
+.loginContainer:hover .login_bottom:before,
+.loginContainer:hover .login_bottom:after,
+.loginContainer:active .login_top:before,
+.loginContainer:active .login_top:after,
+.loginContainer:active .login_bottom:before,
+.loginContainer:active .login_bottom:after {
+  margin-left: 200px;
+  transform-origin: -200px 50%;
+  transition-delay: 0s;
+}
+
+.loginContainer:hover .login_center,
+.loginContainer:active .login_center {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.login_top:before,
+.login_top:after,
+.login_bottom:before,
+.login_bottom:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200vmax;
+  height: 200vmax;
+  top: 50%;
+  left: 50%;
+  margin-top: -100vmax;
+  transform-origin: 0 50%;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  z-index: 10;
+  opacity: 0.65;
+  transition-delay: 0.2s;
+}
+
+.login_top:before {
+  transform: rotate(45deg);
+  background: #8d33c9;
+}
+
+.login_top:after {
+  transform: rotate(135deg);
+  background: #8d33c9;
+}
+
+.login_bottom:before {
+  transform: rotate(-45deg);
+  background: #8d33c9;
+}
+
+.login_bottom:after {
+  transform: rotate(-135deg);
+  background: #933db5;
+}
+
+.login_center {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  transition-delay: 0s;
+  color: #333;
+}
+
+.login_center .login_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  border-radius: 10px;
+  background-color: #ffb5bf !important;
+  border: 0.5px solid #deacff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.femcare_login_logo{
+  height: 250px;
+  width: 350px;
+}
+
+button img{
+  width: 40px;
+  height: 30px;
+}
